@@ -1,3 +1,4 @@
+  
 <template>
   <div
     class="VueCarousel"
@@ -24,9 +25,12 @@
           'padding-left': `${padding}px`,
           'padding-right': `${padding}px`
         }"
-        
       >
-        <slot><slot name="navigation" v-if="navigationEnabled">
+        <slot></slot>
+      </div>
+    </div>
+
+    <slot name="navigation" v-if="navigationEnabled">
       <navigation
         v-if="isNavigationRequired"
         :clickTargetSize="navigationClickTargetSize"
@@ -34,9 +38,7 @@
         :prevLabel="navigationPrevLabel"
         @navigationclick="handleNavigation"
       />
-    </slot></slot>
-      </div>
-    </div>
+    </slot>
 
     <slot name="pagination" v-if="paginationEnabled">
       <pagination @paginationclick="goToPage($event, 'pagination')"/>
