@@ -24,8 +24,9 @@
           'padding-left': `${padding}px`,
           'padding-right': `${padding}px`
         }"
+        
       >
-      <slot name="navigation" v-if="navigationEnabled">
+        <slot><slot name="navigation" v-if="navigationEnabled">
       <navigation
         v-if="isNavigationRequired"
         :clickTargetSize="navigationClickTargetSize"
@@ -33,8 +34,7 @@
         :prevLabel="navigationPrevLabel"
         @navigationclick="handleNavigation"
       />
-    </slot>
-        <slot></slot>
+    </slot></slot>
       </div>
     </div>
 
