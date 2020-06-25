@@ -26,7 +26,8 @@
         }"
       >
         <slot></slot>
-        <slot name="navigation" v-if="navigationEnabled">
+      </div>
+      <slot name="navigation" v-if="navigationEnabled">
       <navigation
         v-if="isNavigationRequired"
         :clickTargetSize="navigationClickTargetSize"
@@ -35,7 +36,6 @@
         @navigationclick="handleNavigation"
       />
     </slot>
-      </div>
     </div>
 
     <slot name="pagination" v-if="paginationEnabled">
