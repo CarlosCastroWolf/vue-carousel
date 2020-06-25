@@ -25,8 +25,6 @@
           'padding-right': `${padding}px`
         }"
       >
-        <slot></slot>
-      </div>
       <slot name="navigation" v-if="navigationEnabled">
       <navigation
         v-if="isNavigationRequired"
@@ -36,6 +34,8 @@
         @navigationclick="handleNavigation"
       />
     </slot>
+        <slot></slot>
+      </div>
     </div>
 
     <slot name="pagination" v-if="paginationEnabled">
