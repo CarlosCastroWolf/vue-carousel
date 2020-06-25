@@ -82,7 +82,7 @@ export default {
 <style scoped>
 .VueCarousel-navigation-button {
   position: absolute;
-  top: 40%;
+  top: 50%;
   box-sizing: border-box;
   color: #4A5A69;
   text-decoration: none;
